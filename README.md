@@ -4,7 +4,7 @@
 I am studying Python in a comprehensive and practical way, focusing on the most fundamental topics for a solid step. In this learning journey, I organize the codes I have written, along with my own notes, and compile them into a repository with relevant topic titles.
 
 
-Source: "Yeni Başlayanlar İçin Sıfırdan Python Dersleri", Python'a Giriş, Youtube
+Source: "Yeni Başlayanlar İçin Sıfırdan Python Dersleri", Python'a Giriş, YouTube
 
 
 ## ----------
