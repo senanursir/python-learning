@@ -18,7 +18,7 @@ for i in range(10):
 # randint function
 """
 for i in range(10):
-    print(random.randint(2,30))  # random integer numbers. Both border included(only for this function.)
+    print(random.randint(2,30))  # random integer numbers. Both border included.
 """
 
 
@@ -26,7 +26,7 @@ for i in range(10):
 # randrange function
 """
 for i in range(10):
-    print(random.randrange(1,10,2))  # 1 to 10, 2 by 2 numbers. available for 2 parameters.
+    print(random.randrange(1,10,2))  # 1 to 9, 2 by 2 numbers. available for 2 parameters too.
 """
 
 
