@@ -4,7 +4,7 @@ import random
 # random function
 """
 for i in range(10):
-    print(random.random())   # random function 10 times (random number between 0 and 1.)
+    print(random.random())   # random function 10 times (random numbers between 0 and 1.)
 """
 
 
