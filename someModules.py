@@ -97,7 +97,7 @@ print(zaman)
 beginning = time.time()
 list = []
 
-for i in range(10000):            # bu işlem ne kadar zaman aldı.
+for i in range(10000):            # How much time did this process take.
     list.append(i)
 ending = time.time()
 print(ending - beginning)
@@ -155,3 +155,107 @@ print(zaman)
 print("program has been started")
 time.sleep(3)                         # delay execution for a given number of seconds
 print("program has been ended")
+
+
+# --------------------------------------------------------------------------------------------------
+# DATETIME MODULE
+
+# DATE
+
+from datetime import date
+
+bugun = date.today()
+print(bugun)
+print(type(bugun))      # class
+print(bugun.day)        # only day, 21
+print(bugun.year)
+print(bugun.month)
+print(bugun.weekday())     # monday's index number is 0
+print(bugun.isoweekday())  # monday is 1.
+
+
+bugun = date.today()
+date1 = date(2003,8,4)
+
+print(date1.weekday())                     # it was monday(index 0)
+print(bugun-date1)                         # 7719 days, 0:00:00     , timedelta
+
+
+# -----------------------------------------
+# DATETIME
+
+from datetime import datetime
+
+suan = datetime.now()                     # 2024-09-21 19:00:10.785030
+print(suan)
+print(type(suan))                         # <class 'datetime.datetime'>
+print(suan.year)
+print(suan.month)
+print(suan.day)
+print(suan.hour)
+print(suan.minute)
+print(suan.second)
+
+print(suan.ctime())                       # Sat Sep 21 19:03:23 2024
+print(suan.date())                        # only date part of suan
+
+
+# -------------------
+
+
+suan = datetime.now()
+
+pastdate = datetime(2022, 3, 15, 11, 5, 12, 123)
+
+print(suan - pastdate)                     # 921 days, 8:06:20.399859
+
+
+# -------------------
+
+
+bugun = date.today()
+suan = datetime.now()
+
+# strftime
+# how we want to print date from bugun - suan
+
+print(bugun.strftime("%d/%m/%Y"))         # 21/09/2024
+print(suan.strftime("%d/%m/%Y"))          # 21/09/2024
+
+print(bugun.strftime("%d/%m/%Y %A"))         # 21/09/2024 Saturday
+print(suan.strftime("%d/%m/%Y-%A"))          # 21/09/2024-Saturday
+
+# another usage
+print(date.strftime(bugun, "%d/%m/%Y %A"))            # 21/09/2024 Saturday
+
+
+# -----------------------------------------
+# TIMEDELTA
+
+from datetime import timedelta
+suan = datetime.now()
+tdelta = timedelta(days=7, hours=5, seconds=59)
+print(suan + tdelta)                       # After that time from the time we were in?: 2024-09-29 00:27:51.282504
+print(suan - tdelta)                       # önce: 2024-09-14 14:25:53.282504
+
+
+# -----------------------------------------
+# PROBLEM SOLVING
+# How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
+
+from datetime import datetime
+
+sundays = 0
+for year in range(1901, 2001):
+    for moth in range(1, 13):                               # after the 12 months are over, it moves on to the next year
+        if datetime(year, moth, 1).weekday() == 6:     # checks if first of the month is monday
+            sundays += 1
+print(sundays)         # 171
+
+
+
+
+
+
+
+
